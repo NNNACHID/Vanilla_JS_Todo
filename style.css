@@ -15,7 +15,7 @@ header {
 
 h1{
     font-family: 'Sigmar', cursive;
-    color: #f3e5ab;
+    color: #f3e5ab; /* Vanilla color */
 }
 
 header, form {
@@ -35,6 +35,11 @@ form button {
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+form button:hover{
+    background-color: rgb(72, 9, 109);
+    color: #f3e5ab;
 }
 
 form input, form button {
