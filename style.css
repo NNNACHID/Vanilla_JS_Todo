@@ -15,7 +15,19 @@ header {
 
 h1{
     font-family: 'Sigmar', cursive;
-    color: #f3e5ab; /* Vanilla color */
+    color: rgb(243, 229, 171); /* Vanilla color */
+    letter-spacing: 0.6rem;
+    /* text-shadow: 0 0 0 rgb(243, 229, 171),
+            1px 0 0 rgb(233, 219, 161),
+            2px 0 0 rgb(223, 209, 151),
+            3px 0 0 rgb(213, 199, 141),
+            4px 0 0 rgb(203, 189, 131),
+            5px 0 0 rgb(193, 179, 121),
+            6px 0 0 rgb(183, 169, 111),
+            7px 0 0 rgb(173, 159, 101),
+            8px 0 0 rgb(163, 149, 91),
+            9px 0 0 rgb(153, 139, 81),
+        ; */
 }
 
 header, form {
@@ -49,7 +61,7 @@ form input, form button {
     background: white;
 }
 
-/* .todo__container {
+.todo__container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,6 +81,7 @@ form input, form button {
     justify-content: space-between;
     align-items: center;
     transition: all 0.6s ease;
+    border-radius: 1.5rem;
 }
 
 .todo li {
@@ -77,10 +90,22 @@ form input, form button {
 
 .delete__btn,
 .complete__btn {
-    background: #f3e5ab;
+    background: #ec1b0c;
     color: black;
     border: none;
-    padding: 1,2rem;
+    padding: 1.2rem;
     cursor: pointer;
     font-size: 1.2rem;
-} */
+}
+
+.delete__btn{
+    border-radius: 0rem 1.5rem 1.5rem 0rem;
+}
+
+.complete__btn{
+    background: rgb(73, 204, 73);
+}
+
+.todo__item{
+    padding: 0rem 0.6rem;
+}
