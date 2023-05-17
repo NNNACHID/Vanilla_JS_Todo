@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(120deg, rgb(46, 46, 255), rgb(72, 9, 109));
+    background-image: linear-gradient(120deg, #2e2eff, #48096d);
     min-height: 100vh;
 }
 
@@ -15,20 +15,26 @@ header {
 
 h1{
     font-family: 'Sigmar', cursive;
-    color: rgb(243, 229, 171); /* Vanilla color */
+    font-size: 4.2rem;
+    color: #f3e5ab; /* Vanilla color */
     letter-spacing: 0.6rem;
-    /* text-shadow: 0 0 0 rgb(243, 229, 171),
-            1px 0 0 rgb(233, 219, 161),
-            2px 0 0 rgb(223, 209, 151),
-            3px 0 0 rgb(213, 199, 141),
-            4px 0 0 rgb(203, 189, 131),
-            5px 0 0 rgb(193, 179, 121),
-            6px 0 0 rgb(183, 169, 111),
-            7px 0 0 rgb(173, 159, 101),
-            8px 0 0 rgb(163, 149, 91),
-            9px 0 0 rgb(153, 139, 81),
-        ; */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #c9bf97,
+        1px 2px 1px #c9bf97,
+        1px 3px 1px #c9bf97,
+        1px 4px 1px #c9bf97,
+        1px 5px 1px #c9bf97,
+        1px 6px 1px #c9bf97,
+        1px 7px 1px #c9bf97,
+        1px 8px 1px #c9bf97,
+        1px 9px 1px #c9bf97,
+        1px 10px 1px #c9bf97,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
 }
+
 
 header, form {
     min-height: 20vh;
@@ -43,14 +49,14 @@ form input{
 
 form button {
     border-radius: 0rem 1.5rem 1.5rem 0rem;
-    color: rgb(72, 9, 109);
+    color: #48096d;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 form button:hover{
-    background-color: rgb(72, 9, 109);
+    background-color: #48096d;
     color: #f3e5ab;
 }
 
@@ -123,4 +129,40 @@ form input, form button {
 .fall{
     transform: translateY(9rem) rotateZ(21deg);
     opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline:none;
+    box-shadow: none;
+    border: none;
+    color: #4b2064;
+    width: 9rem;
+    cursor: pointer;
+    padding: 0.9rem;
+}
+
+.select__container{
+    margin: 0.9rem;
+    position: relative;
+    overflow: hidden;
+    color: #f3e5ab;
+}
+
+.select__container::after{
+    content: "\25BC";
+    position: absolute;
+    background: #48096d;
+    top: 0;
+    right: 0;
+    padding: 0.9rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select__container:hover::after{
+    background: white;
+    color: #48096d;
 }
