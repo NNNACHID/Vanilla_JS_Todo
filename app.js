@@ -54,6 +54,7 @@ function deleteTodo(event){
     if(item.classList[0] === "delete__btn"){
         const todo = item.parentElement;
         todo.classList.add("fall");
+        removeLocalTodos(todo);
         todo.addEventListener("transitionend", function() {
             todo.remove();
         })
@@ -105,8 +106,8 @@ function saveToLocal(todo){
     let todos;
     if (localStorage.getItem("todos") === null){
         todos = [];
-    }else {
-        todos = JSON.parse(localStrorage.getItem("todos"))
+    } else {
+        todos = JSON.parse(localStorage.getItem("todos"));
     }
     todos.push(todo);
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -118,7 +119,7 @@ function getTodos(){
     if (localStorage.getItem("todos") === null){
         todos = [];
     }else {
-        todos = JSON.parse(localStrorage.getItem("todos"))
+        todos = JSON.parse(localStorage.getItem("todos"))
     }
     
     todos.forEach(function(todo){
@@ -147,4 +148,16 @@ function getTodos(){
         // Add to list
         todoList.appendChild(todoDiv);
     });
+}
+
+function removeLocalTodos(todo){
+    let todos;
+    if (localStorage.getItem("todos") === null){
+        todos = [];
+    }else {
+        todos = JSON.parse(localStorage.getItem("todos"))
+    }
+    const todoIndex = todo.children[0].innerText;
+    todos.splice(todos.indexOf(todoIndex), 1);
+    localStorage.setItem("todos", JSON.stringify(todos));
 }
